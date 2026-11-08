@@ -1,6 +1,6 @@
 {
   "password": "0911",
-  "avatar": "/src/assets/Em/image.png",
+  "avatar": "assets/Em/image.png",
   "passcodeTitle": {
     "vi": "Nhập ngày sinh của em nè...",
     "ko": "생일을 입력해주세요..."
@@ -79,8 +79,8 @@
       }
     }
   },
-  "shopImage": "/src/assets/Em/Tiệm Hoa Của Khuê Dịu Dàng.png",
+  "shopImage": "assets/Em/Tiệm Hoa Của Khuê Dịu Dàng.png",
   "letter": {
-    "photo": "/src/assets/Em/em_letter.jpg"
+    "photo": "assets/Em/em_letter.jpg"
   }
 }

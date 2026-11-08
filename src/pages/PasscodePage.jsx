@@ -79,7 +79,7 @@ export default function PasscodePage({ data, lang, onSuccess }) {
       >
         <div className="profile-hero">
           <div className="avatar-wrapper-pro">
-            <img src={data.avatar} alt="Avatar" className="avatar-img-pro" />
+            <img src={`${import.meta.env.BASE_URL}${data.avatar}`} alt="Avatar" className="avatar-img-pro" />
           </div>
           {/* Render tiêu đề đã chọn đúng ngôn ngữ */}
           <h2 className="passcode-title-pro">{passcodeTitle}</h2>

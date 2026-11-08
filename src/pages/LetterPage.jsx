@@ -11,7 +11,9 @@ export default function LetterPage({ data, lang, onClose }) {
     ? data.translations[lang].letter 
     : (data.letter || {});
 
-  const photoSrc = data.letter?.photo || "/src/assets/Em/em_letter.jpg";
+  const photoSrc = data.letter?.photo
+  ? `${import.meta.env.BASE_URL}${data.letter.photo}`
+  : null;
 
   return (
     <motion.div 

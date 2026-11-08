@@ -14,13 +14,26 @@ export default function App() {
   const [lang, setLang] = useState('vi'); // Mặc định tiếng Việt, có thể đổi sang 'ko'
 
   useEffect(() => {
-    fetch('/data.json')
-      .then((res) => res.json())
+    fetch(`${import.meta.env.BASE_URL}data.json`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Không tải được data.json: HTTP ${res.status}`);
+        }
+        return res.json();
+      })
       .then((d) => setData(d))
-      .catch((err) => console.error("Lỗi tải data.json:", err));
+      .catch((err) => {
+        console.error("Lỗi tải data.json:", err);
+      });
   }, []);
 
-  if (!data) return null;
+  if (!data) {
+    return (
+      <div style={{ padding: 30, textAlign: 'center' }}>
+        Đang tải dữ liệu...
+      </div>
+    );
+  }
 
   const toggleLanguage = () => {
     setLang(prev => prev === 'vi' ? 'ko' : 'vi');

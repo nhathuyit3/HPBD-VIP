@@ -67,7 +67,7 @@ export default function ShopPage({ data, lang, onNext }) {
 
         <div className="shop-image-side" onClick={handleImageClick}>
           <motion.img 
-            src={data.shopImage} 
+            src={`${import.meta.env.BASE_URL}${data.shopImage}`}
             alt="Tiệm hoa" 
             className="shop-transparent-img"
             animate={isClicked ? { scale: 1.08, opacity: 0 } : { scale: 1, opacity: 1 }}
