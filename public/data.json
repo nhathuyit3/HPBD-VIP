@@ -1,0 +1,86 @@
+{
+  "password": "0911",
+  "avatar": "/src/assets/Em/image.png",
+  "passcodeTitle": {
+    "vi": "Nhập ngày sinh của em nè...",
+    "ko": "생일을 입력해주세요..."
+  },
+  "translations": {
+    "vi": {
+      "shopSubTitle": "09 THÁNG 11 · MỘT NGÀY THẬT ĐẶC BIỆT",
+      "shopTitleLine1": "Tiệm hoa",
+      "shopTitleLine2": "chỉ mở",
+      "shopTitleHighlight": "một ngày",
+      "shopTitleLine3": "trong năm.",
+      "shopFooterNote": "MỘT CHÚT HOA · MỘT CHÚT THƯƠNG · THẬT NHIỀU YÊU",
+      "quoteText": "“Đi qua bão giông đang cuộn... Anh luôn ở đây bên cửa, Anh đang đợi Bé Iu”",
+      "pickAngelText": "Vào ngày này, một thiên thần tuyệt đẹp đã ra đời và mang đến thế giới này biết bao niềm vui...",
+      "pickMainTitleLine1": "Em chọn hoa nhé,",
+      "pickMainTitleHighlight": "Anh gửi yêu thương.",
+      "pickSubTitle": "Chạm từng bông hoa để đặt vào bó. Chọn đủ 8 bông để hoàn thành bó hoa của Em.",
+      "flowerNames": {
+        "tulip": "Tulip",
+        "sunflower": "Hướng dương",
+        "rose": "Hoa hồng",
+        "daisy": "Cúc nhỏ",
+        "baby": "Lưu ly"
+      },
+      "bouquetWaiting": "Bó hoa của Em đang chờ những điều dịu dàng.",
+      "bouquetSelected": "Đã chọn {count} / {max} bông hoa dịu dàng...",
+      "addRibbonBtn": "Thêm dải ruy băng để hoàn thành bó hoa",
+      "pickBottomQuote": "“GỬI TẶNG NHỮNG BÔNG HOA ĐẸP NHẤT CHO NGƯỜI ĐẸP NHẤT HÔM NAY”",
+      "letter": {
+        "title": "Gửi em Bích Khuê,",
+        "photoCaption": "Một bông hoa xinh đẹp ♡",
+        "paragraphs": [
+          "Chúc mừng sinh nhật em, cô gái xinh đẹp nhất hôm nay.",
+          "Anh muốn tặng em một bó hoa thật đặc biệt. Mỗi bông là một điều anh mong cho em: bình an, niềm vui, những ước mơ thành hiện thực và thật nhiều yêu thương.",
+          "Tuổi mới, em cứ tự tin làm những điều mình thích nhé. Có ngày nào mệt thì nghỉ một chút, đừng quên dành sự dịu dàng cho chính mình.",
+          "Nếu hôm nay có ai hỏi anh muốn tặng em điều gì, anh sẽ nói: một ngày thật vui, một tuổi mới bình an, và thật nhiều ngày sau vẫn được ở bên em."
+        ],
+        "closing": "Anh yêu em rất nhiều. ♡",
+        "signature": "Chúc mừng sinh nhật em, Anh "
+      }
+    },
+    "ko": {
+      "shopSubTitle": "11월 9일 · 아주 특별한 날",
+      "shopTitleLine1": "일년에",
+      "shopTitleLine2": "단 하루만 열리는",
+      "shopTitleHighlight": "꽃집",
+      "shopTitleLine3": "입니다.",
+      "shopFooterNote": "약간의 꽃 · 약간의 사랑 · 아주 많은 애정",
+      "quoteText": "“거친 폭풍이 지나가도... 나는 항상 이 문 앞 서서 그대(베이)를 기다리고 있어요”",
+      "pickAngelText": "이 세상에 아주 아름다운 천명이 태어나 세상에 수많은 기쁨을 가져다준 날...",
+      "pickMainTitleLine1": "꽃을 골라주세요,",
+      "pickMainTitleHighlight": "사랑을 담아 보냅니다.",
+      "pickSubTitle": "꽃을 터치하여 부케에 담아보세요. 총 8송이를 골라 부케를 완성하세요.",
+      "flowerNames": {
+        "tulip": "튜립",
+        "sunflower": "해바라기",
+        "rose": "장미",
+        "daisy": "데이지",
+        "baby": "청금석"
+      },
+      "bouquetWaiting": "부케가 다정한 마음을 기다리고 있어요.",
+      "bouquetSelected": "{count} / {max} 송이의 다정한 꽃을 골랐어요...",
+      "addRibbonBtn": "리본을 더해 부케 완성하기",
+      "pickBottomQuote": "“오늘 가장 아름다운 사람에게 가장 아름다운 꽃을 선물합니다”",
+      "letter": {
+        "title": "비크에게,",
+        "photoCaption": "아름다운 꽃 한 송이 ♡",
+        "paragraphs": [
+          "오늘 가장 아름다운 소녀, 생일 축하해요.",
+          "너에게 특별한 부케를 선물하고 싶어. 꽃 한 송이마다 너를 향한 내 마음을 담았어: 평안, 기쁨, 꿈의 실현, 그리고 무수한 사랑.",
+          "새로운 한 해에도 네가 좋아하는 일들을 자신 있게 해나가길 바라. 지칠 때는 잠시 쉬어가도 좋아, 너 자신에게 다정함을 잊지마.",
+          "오늘 누군가 네게 무엇을 선물하고 싶냐고 묻는다면 난 이렇게 말할 거야: 아주 즐거운 하루, 평안한 한 해, 그리고 앞으로도 오래토록 너의 곁에 머무는 것."
+        ],
+        "closing": "정말 많이 사랑해요. ♡",
+        "signature": "생일 축하해, 오빠가 "
+      }
+    }
+  },
+  "shopImage": "/src/assets/Em/Tiệm Hoa Của Khuê Dịu Dàng.png",
+  "letter": {
+    "photo": "/src/assets/Em/em_letter.jpg"
+  }
+}

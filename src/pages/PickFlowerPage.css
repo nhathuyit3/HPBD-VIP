@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Quicksand:wght@500;600;700&display=swap');
+
+.pick-page-wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Cho phép nội dung chảy từ trên xuống và cuộn thoải mái */
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(rgba(253, 251, 247, 0.82), rgba(247, 225, 215, 0.88)),
+              url('https://images.unsplash.com/photo-1639696194673-67b86204b885?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') center/cover no-repeat;
+  font-family: 'Quicksand', sans-serif;
+  padding: 30px 15px 60px; /* Thêm khoảng trống lớn ở đáy để cuộn thấy rõ bó hoa */
+}
+
+/* --- THANH CUỘN (SCROLLBAR) SIÊU MỎNG VÀ TINH TẾ --- */
+.pick-page-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.pick-page-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pick-page-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(214, 69, 80, 0.4);
+  border-radius: 10px;
+}
+
+.pick-page-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 69, 80, 0.7);
+}
+
+/* HIỆU ỨNG HOA BAY NỀN */
+.pick-floating-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pick-floating-element {
+  position: absolute;
+  bottom: -10vh;
+  animation: pickFloatUp linear infinite;
+  opacity: 0.75;
+  user-select: none;
+}
+
+@keyframes pickFloatUp {
+  0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 0; }
+  10% { opacity: 0.85; }
+  90% { opacity: 0.85; }
+  100% { transform: translateY(-115vh) rotate(360deg) scale(1.2); opacity: 0; }
+}
+
+.pick-header {
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.pick-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: #2b2d42;
+  line-height: 1.25;
+}
+
+.highlight-script {
+  color: #d64550;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.pick-sub-title {
+  font-size: 0.92rem;
+  color: #6d594b;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* KHU VỰC LÀM VIỆC CHÍNH */
+.pick-workspace {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  gap: 40px;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.flower-picker-shelf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 18px 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+/* THẺ THIÊN THẦN RA ĐỜI */
+.angel-intro-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255, 182, 193, 0.6);
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(214, 69, 80, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 360px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.angel-icon {
+  flex-shrink: 0;
+  animation: heartBeat 1.5s infinite ease-in-out;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.angel-intro-text {
+  font-size: 0.82rem;
+  color: #5c4b43;
+  line-height: 1.4;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.flower-list {
+  display: flex;
+  gap: 18px;
+  align-items: flex-end;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding-top: 5px;
+}
+
+.flower-list::-webkit-scrollbar {
+  height: 3px;
+}
+.flower-list::-webkit-scrollbar-thumb {
+  background: rgba(214, 69, 80, 0.3);
+  border-radius: 4px;
+}
+
+.flower-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.flower-card:hover {
+  transform: translateY(-8px);
+}
+
+.flower-item-container {
+  position: relative;
+  width: 75px;
+  height: 155px;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 8px 12px rgba(40, 80, 50, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.flower-stem-svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flower-png-img {
+  position: absolute;
+  top: 4px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.18))
+          drop-shadow(0 2px 4px rgba(255, 255, 255, 0.6));
+}
+
+.flower-name {
+  font-size: 0.8rem;
+  color: #5c4b43;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.shelf-line {
+  width: 100%;
+  height: 7px;
+  background: #e5be9e;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(180, 140, 100, 0.15);
+  margin-top: 5px;
+}
+
+/* KHU VỰC BÓ HOA */
+.bouquet-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 330px;
+}
+
+.bouquet-status-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #5c4b43;
+  text-align: center;
+  margin-bottom: 10px;
+  min-height: 28px;
+}
+
+.add-ribbon-btn {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #b54955;
+  border: 1.5px solid rgba(230, 120, 135, 0.4);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(214, 69, 80, 0.15),
+              inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.bouquet-wrapper {
+  position: relative;
+  width: 250px;
+  height: 290px;
+  display: flex;
+  justify-content: center;
+}
+
+.flowers-inside-bouquet {
+  position: absolute;
+  top: -35px;
+  width: 230px;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.placed-flower-item {
+  position: absolute;
+  transform-origin: bottom center;
+}
+
+.bouquet-paper-svg {
+  position: absolute;
+  bottom: 0;
+  width: 260px;
+  height: 225px;
+  z-index: 3;
+  filter: drop-shadow(0 18px 30px rgba(120, 80, 60, 0.22)) 
+          drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+}
+
+.bouquet-counter {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #9c664b;
+  letter-spacing: 2px;
+}
+
+.pick-bottom-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+  color: #5c4b43;
+  letter-spacing: 1px;
+  text-align: center;
+  z-index: 2;
+  margin-top: 25px;
+}
+
+/* RESPONSIVE CHO DI ĐỘNG: XẾP DỌC VÀ CHO PHÉP CUỘN XEM TOÀN BỘ NỘI DUNG */
+@media (max-width: 768px) {
+  .pick-page-wrapper {
+    align-items: center;
+    padding: 25px 15px 50px;
+  }
+  .pick-header {
+    margin-bottom: 15px;
+  }
+  .pick-workspace {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .flower-picker-shelf {
+    width: 100%;
+    max-width: 340px;
+    padding: 12px 15px 5px;
+  }
+  .flower-list {
+    justify-content: flex-start;
+  }
+  .bouquet-area {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+}

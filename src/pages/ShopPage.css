@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Quicksand:wght@500;600;700&display=swap');
+
+.shop-page-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fdfbf7;
+  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
+  padding: 40px;
+}
+
+/* LỚP HIỆU ỨNG HOA BAY LIÊN TỤC VỚI MẬT ĐỘ DÀY */
+.shop-floating-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shop-floating-element {
+  position: absolute;
+  bottom: -10vh;
+  animation: shopFloatUp linear infinite;
+  opacity: 0.75;
+  user-select: none;
+}
+
+@keyframes shopFloatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-115vh) rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Bố cục nội dung chia 2 cột cân đối */
+.shop-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  gap: 50px;
+  z-index: 2;
+}
+
+/* Cột chữ bên trái */
+.shop-text-side {
+  flex: 0.9;
+  text-align: left;
+  max-width: 450px;
+}
+
+.shop-sub-header {
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  color: #8c7a6b;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.shop-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 4.2vw, 3.8rem);
+  line-height: 1.2;
+  color: #2b2d42;
+  margin-bottom: 25px;
+}
+
+.highlight-text {
+  color: #d64550;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.shop-footer-note {
+  font-size: 0.85rem;
+  color: #b07d62;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* Cột ảnh tiệm hoa bên phải */
+.shop-image-side {
+  flex: 1.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.shop-transparent-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 35px rgba(120, 90, 80, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.shop-transparent-img:hover {
+  transform: scale(1.02);
+}
+
+/* Dòng trích dẫn lãng mạn phía dưới */
+.shop-bottom-quote {
+  position: absolute;
+  bottom: 25px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 1.4vw, 1.15rem);
+  color: #7f6e65;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsive cho màn hình điện thoại/tablet dọc */
+@media (max-width: 768px) {
+  .shop-content-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .shop-text-side {
+    text-align: center;
+    max-width: 100%;
+  }
+  .shop-main-title {
+    font-size: 2.2rem;
+  }
+  .shop-transparent-img {
+    max-width: 90vw;
+  }
+  .shop-bottom-quote {
+    bottom: 15px;
+    font-size: 0.85rem;
+    padding: 0 15px;
+  }
+}
