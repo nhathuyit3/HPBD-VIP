@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Heart } from 'lucide-react';
+import daisyImage from '../assets/Em/daisy.png'
+import hibiscusImage from '../assets/Em/hibiscus.png'
+import morningGloryImage from '../assets/Em/morning-glory.png'
+import roseImage from '../assets/Em/rose.png'
+import sunflowerImage from '../assets/Em/sunflower.png'
 import './PickFlowerPage.css';
 
 const FlowerWithStem = ({ imageSrc }) => {
@@ -64,12 +69,32 @@ export default function PickFlowerPage({ data, lang, onNext }) {
   };
 
   const flowerTypes = [
-    { id: 'tulip', name: t.flowerNames.daisy, image: '/src/assets/Em/daisy.png' },
-    { id: 'sunflower', name: t.flowerNames.tulip, image: '/src/assets/Em/hibiscus.png' },
-    { id: 'rose', name: t.flowerNames.baby, image: '/src/assets/Em/morning-glory.png' },
-    { id: 'daisy', name: t.flowerNames.rose, image: '/src/assets/Em/rose.png' },
-    { id: 'baby', name: t.flowerNames.sunflower, image: '/src/assets/Em/sunflower.png' }
-  ];
+    {
+      id: 'tulip',
+      name: t.flowerNames.daisy,
+      image: daisyImage
+    },
+    {
+      id: 'sunflower',
+      name: t.flowerNames.tulip,
+      image: hibiscusImage
+    },
+    {
+      id: 'rose',
+      name: t.flowerNames.baby,
+      image: morningGloryImage
+    },
+    {
+      id: 'daisy',
+      name: t.flowerNames.rose,
+      image: roseImage
+    },
+    {
+      id: 'baby',
+      name: t.flowerNames.sunflower,
+      image: sunflowerImage
+    }
+  ]
 
   const handleSelectFlower = (flower) => {
     if (selectedFlowers.length < MAX_FLOWERS) {
